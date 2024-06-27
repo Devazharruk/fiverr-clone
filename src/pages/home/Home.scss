@@ -1,0 +1,339 @@
+@import "../../responsive.scss";
+
+.home {
+  display: flex;
+  flex-direction: column;
+
+  .section {
+    width: 100%;
+    justify-content: center;
+    background-color: #f1fdf7;
+    padding: 100px 0px;
+
+    @include largeScreens {
+      padding: 50px 0px;
+    }
+
+    @include mediumScreens {
+      padding: 30px 0px;
+    }
+
+    @include smallScreens {
+      padding: 10px 0px;
+    }
+
+    @include extraSmallScreens{
+      padding: 8px 0px ;
+    }
+
+    &.dark {
+      background-color: #0d084d;
+    }
+
+    .wrapper {
+      width: 85%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 200px;
+
+      @include largeScreens {
+        width: 90%;
+        gap: 50px;
+      }
+
+      @include mediumScreens {
+        width: 95%;
+        gap: 30px;
+      }
+
+      @include smallScreens {
+        width: 98%;
+        gap: 15px;
+        flex-direction: column;
+      }
+
+      @include extraSmallScreens{
+        width: 98%;
+        gap: 15px;
+        flex-direction: column;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 2;
+
+       
+
+        @include largeScreens {
+          gap: 15px;
+          flex: 2;
+          width: 50%;
+        }
+
+        @include mediumScreens {
+          gap: 10px;
+        }
+
+        @include smallScreens {
+          gap: 10px;
+          padding: 0px 20px;
+        }
+
+        @include extraSmallScreens{
+          gap: 10px;
+          padding: 0px 20px;
+        }
+
+        h2 {
+          color: #111;
+          font-size: 30px;
+          font-weight: 500;
+
+          @include largeScreens {
+            font-size: 24px;
+          }
+
+          @include mediumScreens {
+            font-size: 18px;
+          }
+
+          @include extraSmallScreens{
+           font-size: 16px;
+          }
+
+          &.dark {
+            color: white;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          letter-spacing: 1px;
+          line-height: 28px;
+
+          @include largeScreens {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: normal;
+          }
+
+          @include mediumScreens {
+            font-size: 12px;
+            font-weight: 300;
+            line-height: normal;
+          }
+
+          @include extraSmallScreens{
+            font-size: 11px;
+           }
+        }
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          color: #777;
+
+          @include largeScreens {
+            gap: 8px;
+          }
+
+          @include mediumScreens {
+            gap: 4px;
+          }
+
+          @include extraSmallScreens{
+            gap: 2px;
+           }
+
+          .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            @include largeScreens {
+              gap: 8px;
+            }
+
+            @include mediumScreens {
+              gap: 4px;
+            }
+
+            @include extraSmallScreens{
+              gap: 2px;
+             }
+
+            img {
+              width: 24px;
+              height: 24px;
+
+              @include largeScreens {
+                width: 16px;
+                height: 16px;
+              }
+
+              @include mediumScreens {
+                width: 13px;
+                height: 13px;
+              }
+              
+              @include extraSmallScreens{
+                width: 12px;
+                height: 12px;
+               }
+            }
+
+            span {
+              font-weight: 500;
+              font-size: 19px;
+
+              @include largeScreens {
+                font-size: 14px;
+              }
+
+              @include mediumScreens {
+                font-size: 12px;
+              }
+
+              @include extraSmallScreens{
+                font-size: 11px;
+               }
+            }
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 500;
+
+            @include largeScreens {
+              font-size: 12px;
+              line-height: normal;
+              font-weight: 300;
+            }
+
+            @include mediumScreens {
+              line-height: normal;
+              font-size: 10px;
+            }
+
+            @include extraSmallScreens{
+              line-height: normal;
+              font-size: 9px;
+             }
+          }
+        }
+
+        button {
+          padding: 10px 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          background-color: #1dbf73;
+          color: white;
+          border: none;
+          font-size: 18px;
+          width: max-content;
+
+          @include largeScreens {
+            font-size: 14px;
+            padding: 8px 16px;
+          }
+
+          @include mediumScreens {
+            font-size: 12px;
+            padding: 5px 10px;
+          }
+
+          @include extraSmallScreens{
+            font-size: 10px;
+           }
+
+      
+        }
+      }
+
+      .right {
+        flex: 3;
+        height: 80%;
+
+        @include largeScreens {
+          flex: 2;
+        }
+
+        @include mediumScreens {
+          flex: 2;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        video {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &.dark {
+      .details{
+          @include smallScreens{
+            align-items: center !important;  
+            text-align: center !important;
+          }
+          @include extraSmallScreens{
+            align-items: center !important;  
+            text-align: center !important;
+          }
+      }
+
+
+      h1,
+      h2,
+      p,
+      span {
+        color: rgb(238, 237, 237) !important;
+      }
+
+      h2 {
+        font-size: 24px !important;
+      }
+
+      h1 {
+        @include largeScreens {
+          font-size: 28px !important;
+        }
+
+        @include mediumScreens {
+          font-size: 22px !important;
+        }
+
+        @include extraSmallScreens{
+          font-size: 18px;
+         }
+      }
+
+      span {
+        font-size: 16px !important;
+
+        @include largeScreens {
+          font-size: 12px !important;
+          font-weight: 300 !important;
+        }
+
+        @include mediumScreens {
+          font-size: 10px !important;
+        }
+
+        @include extraSmallScreens{
+          font-size: 10px !important;
+         }
+      }
+    }
+  }
+}

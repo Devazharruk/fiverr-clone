@@ -1,0 +1,282 @@
+@import "../../responsive.scss";
+
+/* Footer Section Styles */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+
+  /* Responsive Padding Adjustments */
+  @include largeScreens {
+    padding-bottom: 40px;
+  }
+
+  @include mediumScreens {
+    padding-bottom: 20px;
+  }
+
+  @include smallScreens {
+    padding-bottom: 10px;
+  }
+
+  @include extraSmallScreens {
+    padding-bottom: 8px;
+  }
+
+  /* Container Styles */
+  .container {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+    /* Responsive Width and Gap Adjustments */
+    @include largeScreens {
+      width: 90%;
+      gap: 30px;
+    }
+
+    @include mediumScreens {
+      width: 95%;
+      gap: 20px;
+    }
+
+    @include smallScreens {
+      width: 98%;
+      gap: 20px;
+    }
+
+    @include extraSmallScreens {
+      width: 98%;
+      gap: 10px;
+    }
+
+    /* Image Styles */
+    img {
+      width: 24px;
+      height: 24px;
+
+      @include largeScreens {
+        width: 18px;
+        height: 18px;
+      }
+
+      @include mediumScreens {
+        width: 12px;
+        height: 12px;
+      }
+
+      @include smallScreens {
+        width: 10px;
+        height: 10px;
+      }
+
+      @include extraSmallScreens {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    /* Top Section Styles */
+    .top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @include smallScreens {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      @include extraSmallScreens {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      /* Category Styles */
+      .category {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include largeScreens {
+          gap: 10px;
+        }
+
+        @include mediumScreens {
+          gap: 5px;
+        }
+
+        @include smallScreens {
+          text-align: center;
+          gap: 3px;
+        }
+
+        @include extraSmallScreens {
+          text-align: center;
+          gap: 3px;
+        }
+
+        /* Category Heading Styles */
+        h2 {
+          color: #222;
+          font-size: 20px;
+          font-weight: 500;
+
+          @include largeScreens {
+            font-size: 16px;
+          }
+
+          @include mediumScreens {
+            font-size: 14px;
+          }
+
+          @include smallScreens {
+            font-size: 12px;
+          }
+
+          @include extraSmallScreens {
+            font-size: 11px;
+          }
+        }
+
+        /* Category Link Styles */
+        a {
+          color: gray;
+          font-size: 17px;
+
+          @include largeScreens {
+            font-size: 12px;
+          }
+
+          @include mediumScreens {
+            font-size: 12px;
+            font-weight: 300;
+          }
+
+          @include smallScreens {
+            font-size: 10px;
+          }
+
+          @include extraSmallScreens {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+
+    /* Bottom Section Styles */
+    .bottom {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: gray;
+
+      @include smallScreens {
+        flex-direction: column-reverse;
+        gap: 10px;
+      }
+
+      @include extraSmallScreens {
+        flex-direction: column-reverse;
+        gap: 8px;
+      }
+
+      /* Bottom Left Styles */
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include largeScreens {
+          gap: 15px;
+        }
+
+        @include mediumScreens {
+          gap: 12px;
+        }
+
+        @include smallScreens {
+          gap: 8px;
+        }
+
+        @include extraSmallScreens {
+          gap: 7px;
+        }
+
+        h1 {
+          @include mediumScreens {
+            font-size: 22px;
+          }
+
+          @include smallScreens {
+            font-size: 18px;
+          }
+
+          @include extraSmallScreens {
+            font-size: 17px;
+          }
+        }
+
+        span {
+          font-size: 15px;
+
+          @include largeScreens {
+            font-size: 12px;
+          }
+
+          @include mediumScreens {
+            font-size: 9px;
+          }
+
+          @include extraSmallScreens {
+            font-size: 8px;
+          }
+        }
+      }
+
+      /* Bottom Right Styles */
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include largeScreens {
+          gap: 15px;
+        }
+
+        @include mediumScreens {
+          gap: 10px;
+        }
+
+        span {
+          @include mediumScreens {
+            font-size: 12px;
+          }
+
+          @include extraSmallScreens {
+            font-size: 10px;
+          }
+        }
+
+        /* Social Icons Styles */
+        .social {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          @include largeScreens {
+            gap: 10px;
+          }
+
+          @include mediumScreens {
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+}

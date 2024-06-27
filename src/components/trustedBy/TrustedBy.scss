@@ -1,0 +1,79 @@
+@import "../../responsive.scss";
+
+.trustedBy {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #fafafa;
+
+  @include largeScreens {
+    height: 70px;
+  }
+
+  @include mediumScreens {
+    height: 50px;
+  }
+
+  @include extraSmallScreens {
+    height: 40px;
+  }
+
+  .container {
+    gap: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include largeScreens {
+      gap: 15px;
+    }
+
+    @include mediumScreens {
+      gap: 10px;
+    }
+
+    @include extraSmallScreens {
+      gap: 8px;
+    }
+
+    span {
+      color: gray;
+      font-size: 24px;
+      font-weight: 300;
+
+      @include largeScreens {
+        font-size: 18px;
+      }
+
+      @include mediumScreens {
+        font-size: 16px;
+      }
+
+      @include extraSmallScreens {
+        font-size: 14px;
+      }
+    }
+
+    img {
+      width: 45px;
+      height: 45px;
+
+      @include largeScreens {
+        width: 35px;
+        height: 35px;
+      }
+
+      @include mediumScreens {
+        width: 25px;
+        height: 25px;
+      }
+
+      @include extraSmallScreens {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

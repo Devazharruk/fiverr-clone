@@ -1,0 +1,98 @@
+@import "../../responsive.scss";
+
+/* Gig Card Component Styles */
+.gigCard {
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  height: 500px;
+  border: 1px solid lightgray;
+
+  /* Responsive Width Adjustments */
+  @include largeScreens {
+    width: 300px;
+  }
+
+  @include mediumScreens {
+    width: 250px;
+  }
+
+  @include smallScreens {
+    width: 200px;
+  }
+
+  /* Image Styles */
+  img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+
+  /* Details Section Styles */
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    /* User Section Styles */
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    /* Stars Section Styles */
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  /* Horizontal Line Styles */
+  hr {
+    border: 0.5px solid rgb(243, 241, 241);
+    height: 0;
+  }
+
+  /* Bottom Section Styles */
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Price Section Styles */
+    .price {
+      text-align: center;
+
+      h2 {
+        font-weight: bold;
+        color: #333;
+      }
+
+      span {
+        color: gray;
+        font-weight: 300;
+      }
+    }
+  }
+}

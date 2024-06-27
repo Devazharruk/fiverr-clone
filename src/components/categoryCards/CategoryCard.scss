@@ -1,0 +1,109 @@
+@import "../../responsive.scss";
+
+// Card Component Styles
+.card {
+  width: 220px;
+  height: 350px;
+  border-radius: 10px;
+  position: relative;
+
+  // Media Queries for Different Screen Sizes
+  @include largeScreens {
+    width: 180px;
+    height: 290px;
+  }
+
+  @include mediumScreens {
+    width: 155px;
+    height: 150px;
+  }
+
+  @include smallScreens {
+    width: 110px;
+    height: 130px;
+  }
+
+  @include extraSmallScreens {
+    width: 65px;
+    height: 100px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .desc {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    // Media Queries for Description Position
+    @include smallScreens {
+      top: 8px;
+      left: 8px;
+    }
+
+    @include extraSmallScreens {
+      top: 5px;
+      left: 5px;
+    }
+
+    span {
+      color: white;
+      font-size: 16px;
+      font-weight: 300;
+
+      // Media Queries for Font Size
+      @include largeScreens {
+        font-size: 12px;
+      }
+
+      @include mediumScreens {
+        font-size: 8px;
+      }
+
+      @include smallScreens {
+        font-size: 7px;
+      }
+
+      @include extraSmallScreens {
+        font-size: 5px;
+      }
+    }
+
+    h2 {
+      font-weight: 500;
+      color: white;
+
+      // Media Queries for Font Size
+      @include largeScreens {
+        font-size: 18px;
+      }
+
+      @include mediumScreens {
+        font-size: 14px;
+      }
+
+      @include smallScreens {
+        font-size: 13px;
+      }
+
+      @include extraSmallScreens {
+        font-size: 9px;
+      }
+    }
+  }
+}

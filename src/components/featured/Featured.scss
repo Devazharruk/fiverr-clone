@@ -1,0 +1,219 @@
+@import "../../responsive.scss";
+
+/* Featured Section Styles */
+.featured {
+  display: flex;
+  justify-content: center;
+  background-color: #013914;
+
+
+  .container {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Responsive Width Adjustments */
+    @include largeScreens {
+      width: 90%;
+    }
+
+    @include mediumScreens {
+      width: 95%;
+    }
+
+    @include smallScreens {
+      width: 98%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 50px;
+    }
+
+    @include extraSmallScreens {
+      width: 98%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 50px;
+    }
+
+
+    .textContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      /* Responsive Gap Adjustments */
+      @include largeScreens {
+        gap: 15px;
+      }
+
+      @include mediumScreens {
+        gap: 10px;
+      }
+
+      @include smallScreens {
+        text-align: center;
+        align-items: center;
+        flex: none;
+      }
+
+      @include extraSmallScreens {
+        text-align: center;
+        align-items: center;
+        flex: none;
+      }
+
+
+      h2 {
+        font-size: 48px;
+        color: white;
+
+        @include largeScreens {
+          font-size: 35px;
+        }
+
+        @include mediumScreens {
+          font-size: 30px;
+        }
+      }
+
+
+      .searchBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+
+        /* Responsive Height and Width Adjustments */
+        @include largeScreens {
+          height: 40px;
+        }
+
+        @include mediumScreens {
+          height: 34px;
+        }
+
+        @include smallScreens {
+          width: 90%;
+        }
+
+        @include extraSmallScreens {
+          height: 45px;
+          width: 90%;
+        }
+
+
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          height: 100%;
+
+          input {
+            height: 100%;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            padding: 0 10px;
+          }
+
+          img {
+            margin: 0 10px;
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+
+            @include largeScreens {
+              width: 20px;
+              height: 20px;
+            }
+
+            @include mediumScreens {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+
+        button {
+          height: 100%;
+          padding: 0 40px;
+          cursor: pointer;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          background-color: #1dbf73;
+
+          @include largeScreens {
+            padding: 0 30px;
+            font-size: 12px;
+          }
+
+          @include mediumScreens {
+            padding: 0 20px;
+            font-size: 10px;
+          }
+        }
+      }
+
+
+      .popular {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        @include largeScreens {
+          gap: 5px;
+        }
+
+        span {
+          color: white;
+        }
+
+        button {
+          cursor: pointer;
+          padding: 10px 20px;
+          border-radius: 20px;
+          background-color: transparent;
+          border: 1px solid lightgray;
+          color: white;
+
+          @include largeScreens {
+            padding: 8px 16px;
+            font-size: 10px;
+          }
+
+          @include mediumScreens {
+            padding: 5px;
+            font-size: 8px;
+          }
+
+          @include extraSmallScreens {
+            padding: 5px;
+            font-size: 7px;
+          }
+        }
+      }
+    }
+
+ 
+    .imageContainer {
+      flex: 1;
+
+      @include smallScreens {
+        flex: none;
+      }
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

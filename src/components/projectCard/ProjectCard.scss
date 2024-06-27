@@ -1,0 +1,145 @@
+@import "../../responsive.scss";
+
+/* Project Card Component Styles */
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  height: 330px;
+  border: 1px solid rgb(226, 225, 225);
+  border-radius: 10px;
+  gap: 20px;
+  padding-bottom: 100px;
+
+  /* Responsive Styles */
+  @include largeScreens {
+    width: 220px;
+    height: 300px;
+  }
+
+  @include mediumScreens {
+    width: 180px;
+    height: 220px;
+  }
+
+  @include smallScreens {
+    width: 130px;
+    height: 150px;
+  }
+
+  @include extraSmallScreens {
+    width: 85px;
+    height: 120px;
+  }
+
+  img {
+    width: 100%;
+    height: 85%;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  /* Details Section Styles */
+  .details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+
+    /* Responsive Styles for Details Section */
+    @include largeScreens {
+      gap: 10px;
+      padding: 20px;
+    }
+
+    @include mediumScreens {
+      gap: 5px;
+      padding: 10px;
+    }
+
+    @include smallScreens {
+      gap: 3px;
+      padding: 5px;
+    }
+
+    @include extraSmallScreens {
+      gap: 3px;
+      padding: 4px;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+
+      /* Responsive Styles for Image */
+      @include largeScreens {
+        width: 30px;
+        height: 30px;
+      }
+
+      @include mediumScreens {
+        width: 24px;
+        height: 24px;
+      }
+
+      @include smallScreens {
+        width: 18px;
+        height: 18px;
+      }
+
+      @include extraSmallScreens {
+        width: 16px;
+        height: 18px;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        /* Responsive Styles for Span */
+        @include largeScreens {
+          font-size: 12px;
+        }
+
+        @include mediumScreens {
+          font-size: 10px;
+        }
+
+        @include smallScreens {
+          font-size: 6px;
+        }
+
+        @include extraSmallScreens {
+          font-size: 5px;
+        }
+      }
+
+      h3 {
+        font-weight: 500;
+
+        /* Responsive Styles for Heading */
+        @include largeScreens {
+          font-size: 16px;
+        }
+
+        @include mediumScreens {
+          font-size: 14px;
+        }
+
+        @include smallScreens {
+          font-size: 8px;
+          font-weight: 300;
+        }
+
+        @include extraSmallScreens {
+          font-size: 7px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

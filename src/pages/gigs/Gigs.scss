@@ -1,0 +1,141 @@
+@import '../../responsive.scss';
+
+.gigs {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0px;
+  .container {
+    width: 85%;
+
+    @include largeScreens{
+      width: 90%;
+    }
+
+    @include extraSmallScreens{
+      width: 95%;
+    }
+
+    .filter {
+      display: flex;
+      justify-content: space-between;
+
+      @include extraSmallScreens{
+        flex-direction: column;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include extraSmallScreens{
+          align-items: center;
+        }
+
+        .breadCrumbs {
+          color: gray;
+         font-size: 14px;
+        }
+
+        .desc {
+          font-weight: 300;
+          font-size: 16px;
+          color: gray;
+
+          @include extraSmallScreens{
+            text-align: center;
+          }
+        }
+
+        .filterPrice {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          @include extraSmallScreens{
+            flex-direction: column;
+            width: 100%;
+          }
+
+          span {
+            font-size: 18px;
+            font-weight: 400;
+          }
+          input {
+            outline: none;
+            border: 1px solid lightgray;
+            outline: none;
+            padding: 10px;
+
+            @include extraSmallScreens{
+              width: 100%;
+            }
+          }
+
+          button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #1dbf73;
+            border-radius: 10px;
+            color: white;
+            border: none;
+          }
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        align-self: flex-end;
+        position: relative;
+
+        @include extraSmallScreens{
+          margin-top: 30px;
+          align-self: center;
+        }
+
+        span {
+          color: gray;
+        }
+
+        img {
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+
+        .options {
+          position: absolute;
+          top: 30px;
+          left: 0;
+          background-color: white;
+          width: max-content;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid lightgray;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          display: none;
+
+          h3 {
+            font-weight: 300;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .gigContainer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      padding-top: 50px;
+
+      @include extraSmallScreens{
+        justify-content: center;
+      }
+    }
+  }
+}

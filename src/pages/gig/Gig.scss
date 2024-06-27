@@ -1,0 +1,420 @@
+@import "../../responsive.scss";
+
+.gig {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0px;
+
+  @include extraSmallScreens {
+    padding: 30px 0px;
+  }
+
+  .container {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+    @include mediumScreens {
+      width: 90%;
+    }
+
+    @include smallScreens {
+      width: 95%;
+      flex-direction: column;
+    }
+    @include extraSmallScreens {
+      width: 95%;
+      flex-direction: column;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      flex: 3;
+
+      @include mediumScreens {
+        gap: 30px;
+      }
+
+      @include smallScreens {
+        gap: 20px;
+      }
+
+      @include extraSmallScreens {
+        gap: 0px;
+      }
+
+      .user {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .breadCrumbs {
+          font-size: 12px;
+          color: gray;
+        }
+
+        .userInfo {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .stars {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+      }
+
+      .slider {
+        width: 100%;
+
+        img {
+          object-fit: cover !important;
+          height: 500px;
+
+          @include mediumScreens {
+            height: 410px;
+          }
+
+          @include smallScreens {
+            width: 100%;
+            object-fit: contain;
+          }
+          @include extraSmallScreens {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+          }
+        }
+
+        .carousel-next,
+        .carousel-prev {
+          background-color: lightgray;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .aboutGig {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        p {
+          color: #444;
+          font-size: 16px;
+        }
+      }
+
+      .aboutSeller {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .seller {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .stars {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              img {
+                width: 14px;
+                height: 14px;
+              }
+            }
+
+            button {
+              padding: 10px 20px;
+              cursor: pointer;
+              background-color: transparent;
+              border: none;
+              border: 1px solid lightgray;
+              border-radius: 10px;
+            }
+          }
+        }
+
+        .details {
+          padding: 20px;
+          border-radius: 5px;
+          border: 1px solid lightgray;
+          height: 300px;
+
+          @include smallScreens {
+            height: max-content;
+          }
+
+          @include extraSmallScreens {
+            height: max-content;
+          }
+
+          .items {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            @include mediumScreens {
+              height: 60%;
+            }
+
+            @include smallScreens {
+              height: 70%;
+            }
+
+            @include extraSmallScreens {
+              height: 70%;
+            }
+          }
+
+          hr {
+            height: 0;
+            border: 1px solid rgb(230, 229, 229);
+            margin: 10px 0px;
+          }
+
+          p {
+            color: #444;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .reviews {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          margin-bottom: 20px;
+        }
+
+        .review {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .user {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .info {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              .address {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                img {
+                  width: 24px;
+                  height: 14px;
+                  border-radius: 0;
+                }
+
+                span {
+                  font-size: 14px;
+                  color: gray;
+                }
+              }
+            }
+          }
+
+          .stars {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+              width: 14px;
+              height: 14px;
+            }
+          }
+
+          .desc {
+            color: #444;
+            font-weight: 300;
+          }
+
+          .helpful {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              width: 14px;
+            }
+          }
+        }
+
+        hr {
+          border: 1px solid lightgray;
+          height: 0;
+          margin: 50px 0px;
+        }
+      }
+    }
+
+    .right {
+      flex: 2;
+      position: relative;
+
+      .priceCard {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        position: sticky;
+        top: 200px;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h1,
+          h2 {
+            color: #333;    
+          }
+
+          h1{
+            font-size: 28px;
+
+            @include largeScreens{
+                font-size: 24px;
+            }
+
+            @include mediumScreens{
+                font-size: 22px;
+            }
+
+            @include smallScreens{
+                font-size: 20px;
+            }
+
+            @include extraSmallScreens{
+                font-size: 18px;
+            }
+          }
+
+          h2 {
+            font-size: 22px;
+
+            @include largeScreens{
+                font-size: 17px;
+            }
+
+            @include mediumScreens{
+                font-size: 16px;
+            }
+
+            @include smallScreens{
+                font-size: 15px;
+            }
+
+            @include extraSmallScreens{
+                font-size: 14px;
+            }
+          }
+        }
+
+        p {
+          color: gray;
+        }
+
+        .features {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .option {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              color: #444;
+            }
+          }
+
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            span {
+              font-size: 14px;
+              color: gray;
+            }
+          }
+        }
+
+        button {
+          background-color: #1dbf73;
+          color: white;
+          font-size: 18px;
+          border: none;
+          cursor: pointer;
+          padding: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

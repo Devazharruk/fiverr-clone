@@ -1,0 +1,81 @@
+@import "../../responsive.scss";
+
+.slide {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 100px 0;
+  width: 100%;
+  margin: auto;
+
+  @include largeScreens {
+    gap: 10px;
+    padding: 50px 0;
+  }
+
+  @include mediumScreens {
+    gap: 5px;
+    padding: 20px 0;
+  }
+
+  @include smallScreens {
+    gap: 3px;
+    padding: 10px 0;
+  }
+
+  @include extraSmallScreens {
+    gap: 3px;
+    padding: 10px 0;
+  }
+
+  .wrapper {
+    width: 85%;
+
+    @include largeScreens {
+      width: 90%;
+    }
+
+    @include mediumScreens {
+      width: 95%;
+    }
+
+    @include smallScreens {
+      width: 98%;
+    }
+
+    @include extraSmallScreens {
+      width: 98%;
+    }
+
+    .carousel-next,
+    .carousel-prev {
+      background-color: lightgray;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include largeScreens {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include mediumScreens {
+        width: 25px;
+        height: 25px;
+      }
+
+      @include smallScreens {
+        width: 25px;
+        height: 25px;
+      }
+
+      @include extraSmallScreens {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
