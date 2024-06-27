@@ -21,9 +21,6 @@ A clone of the popular freelancing platform Fiverr, built with React.js and SCSS
 - **Modern UI**: Responsive design with intuitive user interactions.
 - **Enhanced User Experience**: Utilizes sliders, featured sections, and categorized cards for better engagement.
 
-## Demo
-
-Check out the live demo [here](link-to-live-demo).
 
 ## Technologies Used
 
